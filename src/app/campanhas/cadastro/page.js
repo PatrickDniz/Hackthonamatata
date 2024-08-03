@@ -51,7 +51,7 @@ export default function Page() {
               label="Nome" 
               name="name" 
               id="name" 
-              pattern="^[a-zA-Z\s]*$"
+              pattern="^[a-zA-Z\u00C0-\u00FF\s]*$"
               type="text"
               placeholder="Informe o nome da sua campanha"
               onChange={onChange}
@@ -76,7 +76,7 @@ export default function Page() {
               label="Imagem" 
               name="image" 
               id="image" 
-              pattern="^[a-zA-Z0-9]*$"
+              pattern="^[^\s]+$"
               type="text"
               placeholder="Informe o link para imagem de sua campanha"
               onChange={onChange}
@@ -87,7 +87,7 @@ export default function Page() {
               label="Tag Principal" 
               name="tag" 
               id="tag" 
-              pattern="^[a-zA-Z\s]*$"
+              pattern="^[a-zA-Z\u00C0-\u00FF\s]*$"
               type="text"
               placeholder="Informe uma tag para aparecer em sua campanha"
               onChange={onChange}
@@ -109,7 +109,6 @@ export default function Page() {
               label="Endereço da Sede de sua Campanha" 
               name="address" 
               id="address" 
-              pattern="^[a-zA-Z0-9\s]*$"
               type="text"
               placeholder="Informe o endereço da sede de sua campanha"
               onChange={onChange}
@@ -135,7 +134,6 @@ export default function Page() {
               label="Crie um Texto Chamando Voluntários" 
               name="volunteer_call" 
               id="volunteer_call" 
-              pattern="^[a-zA-Z\s]*$"
               type="text"
               placeholder="Informe o texto de chamado de voluntários"
               onChange={onChange}
@@ -146,7 +144,6 @@ export default function Page() {
               label="Crie um Texto Solicitando Doações" 
               name="donation_text" 
               id="donation_text" 
-              pattern="^[a-zA-Z\s]*$"
               type="text"
               placeholder="Informe o texto para solicitar doações"
               onChange={onChange}

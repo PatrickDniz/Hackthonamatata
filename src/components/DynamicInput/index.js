@@ -14,7 +14,7 @@ const DynamicInput = ({ label, name, id, pattern, type, placeholder, onChange })
         type={type} 
         name={name} 
         id={id} 
-        pattern={pattern}
+        {...(pattern ? { pattern } : {})}
         placeholder={placeholder}
         aria-required="true"
         required

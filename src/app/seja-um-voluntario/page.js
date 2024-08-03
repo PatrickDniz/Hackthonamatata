@@ -49,7 +49,7 @@ export default function Page() {
               label="Nome" 
               name="name" 
               id="name" 
-              pattern="^[a-zA-Z\s]*$"
+              pattern="^[a-zA-Z\u00C0-\u00FF\s]*$"
               type="text"
               placeholder="Informe seu nome completo"
               value={formData.name}
@@ -93,7 +93,7 @@ export default function Page() {
               label="Tipo do Documento" 
               name="document_type" 
               id="document_type" 
-              pattern="^[a-zA-Z\s]*$"
+              pattern="^[a-zA-Z\u00C0-\u00FF\s]*$"
               type="text"
               placeholder="Informe o tipo de documento. Tipos: CPF, CNPJ ou Passaporte"
               value={formData.document_type}
@@ -104,7 +104,6 @@ export default function Page() {
               label="Seu Endereço" 
               name="address" 
               id="address" 
-              pattern="^[a-zA-Z0-9\s]*$"
               type="text"
               placeholder="Informe o seu endereço"
               value={formData.address}
@@ -115,7 +114,7 @@ export default function Page() {
               label="Seu Gênero" 
               name="gender" 
               id="gender" 
-              pattern="^[a-zA-Z\s]*$"
+              pattern="^[a-zA-Z\u00C0-\u00FF\s]*$"
               type="text"
               placeholder="Informe o seu gênero ou escreva: Prefiro não informar"
               value={formData.gender}

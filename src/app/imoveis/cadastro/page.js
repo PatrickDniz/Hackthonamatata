@@ -46,7 +46,7 @@ export default function Page() {
               label="Título do Imóvel" 
               name="title" 
               id="title" 
-              pattern="^[a-zA-Z0-9\s]*$"
+              pattern="^[a-zA-Z\u00C0-\u00FF\s]*$"
               type="text"
               placeholder="Informe um título para seu imóvel"
               onChange={onChange}
@@ -57,7 +57,7 @@ export default function Page() {
               label="Imagem do Imóvel" 
               name="image" 
               id="image" 
-              pattern="^[a-zA-Z0-9]*$"
+              pattern="^[^\s]+$"
               type="text"
               placeholder="Informe o link para imagem de seu imóvel"
               onChange={onChange}
@@ -68,7 +68,6 @@ export default function Page() {
               label="Endereço do Imóvel" 
               name="address" 
               id="address" 
-              pattern="^[a-zA-Z0-9\s]*$"
               type="text"
               placeholder="Informe o endereço de seu imóvel"
               onChange={onChange}
