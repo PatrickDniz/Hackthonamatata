@@ -1,0 +1,50 @@
+.section {
+  width: 1250px;
+  max-width: calc(100% - 20px);
+  margin: 20px auto;
+}
+.titleBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+.titleBar > h2 {
+  color: var(--primary);
+  font-size: 24px;
+  line-height: 120%;
+  font-weigth: bold;
+}
+.titleBar > a {
+  font-size: 18px;
+  line-height: 120%;
+  font-weigth: bold;
+  transition: 333ms all ease-in-out;
+}
+.titleBar > a:hover {
+  color: var(--primary);
+}
+.swiperContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-inline: 20px;
+}
+.prev, .next {
+  position: absolute; 
+  cursor:pointer;
+  transition: 333ms all ease-in-out;
+}
+.prev:hover:not(.swiper-button-disabled), .next:hover:not(.swiper-button-disabled) {
+  color: var(--primary); 
+}
+.prev {
+  left: -20px;
+}
+
+.next {
+  right: -20px;
+}
+.card { 
+  width: 280px !important;
+}

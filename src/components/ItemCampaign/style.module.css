@@ -1,26 +1,33 @@
 .card {
-  width: 600px;
+  width: 280px;
   max-width: 100%;
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--card);
   display: flex;
+  flex-direction: column;
   overflow: hidden;
+  position: relative;
+  padding: 16px;
 }
 .cardImage {
   position: relative;
-  width: 240px;
-  height: 240px;
+  width: 100%;
+  height: auto;
   max-width: 100%;
   aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 12px;
 }
 .cardImage > img {
+  width: 100%;
+  height: 100%;
   aspect-ratio: 1;
   object-fit: cover;
 }
 .cardImage > span {
   border-radius: 8px;
-  background: rgba(17, 17, 17, .65);
+  background: rgba(17, 17, 17, 0.65);
   backdrop-filter: blur(6px);
   padding: 4px 8px;
   color: #fff;
@@ -35,20 +42,39 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 20px;
+  margin-top: 12px;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 130%;
 }
 .cardInfo h3 {
   color: var(--primary);
-  font-size: 18px;
-  line-height: 130%;
+  font-weight: bold;
 }
-.cardInfo button {
-  height: 45px;
+.cardInfo > span{ 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical; 
+  height: 64px;
+}
+
+.cardInfo > a {
+  width: 100%;
+  text-align: center;
+  padding: 8px 12px;
   outline: none;
   border: none;
-  border-radius: 12px;
-  background: var(--secondary);
+  border-radius: 5px;
+  box-shadow: 0 0 10px -2px #ccc;
+  background: var(--background-secondary);
   color: var(--text);
   margin-top: auto;
+  margin-left: auto;
+  transition: 333ms all ease-in-out;
+}
+
+.cardInfo > a:hover {
+  color: var(--primary);
 }
