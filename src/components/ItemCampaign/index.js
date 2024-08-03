@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./style.module.css";
 
-export default function ItemCampaing({ data }) {
+export default function ItemCampaign({ data }) {
   const {
     id,
     name,
@@ -9,7 +9,7 @@ export default function ItemCampaing({ data }) {
     image,
     tag
   } = data;  
-  console.log(process.env.APIHACKTHONAMATATA)
+  
   return (
     <div className={styles.card}>
       <div className={styles.cardImage}> 
