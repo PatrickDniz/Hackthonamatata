@@ -1,6 +1,6 @@
 import styles from "./style.module.css"
 
-const DynamicInput = ({ label, name, id, pattern, type, placeholder }) => {
+const DynamicInput = ({ label, name, id, pattern, type, placeholder, onChange }) => {
   return (
     <div>
       <label 
@@ -14,10 +14,11 @@ const DynamicInput = ({ label, name, id, pattern, type, placeholder }) => {
         type={type} 
         name={name} 
         id={id} 
-        pattern={pattern}
+        {...(pattern ? { pattern } : {})}
         placeholder={placeholder}
         aria-required="true"
         required
+        onChange={(e) => onChange(e)}
       />
     </div>
   )
