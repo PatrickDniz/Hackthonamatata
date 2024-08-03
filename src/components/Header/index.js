@@ -21,7 +21,7 @@ export default function Header() {
             <LuHelpingHand fontSize={20} />
             <span>Ajude Agora</span>
           </Link>
-          <Link className={clsx(styles.navItem, { [styles.selected]: path === "/voluntarios" })} href={"/voluntarios"}>
+          <Link className={clsx(styles.navItem, { [styles.selected]: path === "/seja-um-voluntario" })} href={"/seja-um-voluntario"}>
             <LiaHandsHelpingSolid fontSize={20} />
             <span>Seja um voluntário</span>
           </Link>

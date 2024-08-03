@@ -56,6 +56,29 @@
     text-align: center;
 }
 
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
 .button {
     background-color: #0056b3;
     color: #fff;
@@ -93,7 +116,7 @@
 
 @media screen and (max-width: 600px) {
     .banner_layout {
-        aspect-ratio: 16 / 9; 
+        aspect-ratio: 16 / 6; 
         height: auto; 
     }
 
@@ -141,6 +164,7 @@
 @media screen and (max-width: 335px) {
     .headline {
         font-size: 1.5rem;
+        text-align: center;
     }
 
     .legend {
