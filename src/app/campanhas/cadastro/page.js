@@ -1,8 +1,31 @@
-import styles from "./page.module.css"
-import DynamicInput from "../../../components/DynamicInput"
-import Image from "next/image"
+'use client'
+
+import styles from './page.module.css'
+import DynamicInput from '../../../components/DynamicInput'
+import Image from 'next/image'
+import { handleSubmit } from '/src/utils/formHandler'
+import { useState } from 'react'
 
 export default function Page() {
+  const [formData, setFormData] = useState({
+    name: '',
+    small_description: '',
+    image: '',
+    tag: '',
+    contact_phone: '',
+    address: '',
+    complete_description: '',
+    volunteer_call: '',
+    donation_text: ''
+  })
+
+  const onChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
+
   return (
     <>
       <section className={styles.layout}>
@@ -20,7 +43,7 @@ export default function Page() {
         <p className={styles.text}>
           Cadastre sua campanha para arrecadação, auxílio e contribuição contra crises climáticas! Contribua para um futuro mais sustentável e ajude a enfrentar os desafios das mudanças climáticas. Sua iniciativa pode fazer a diferença!
         </p>
-        <form className={styles.form} action="/" method="post">
+        <form className={styles.form} onSubmit={(e) => handleSubmit(e, formData)}>
           <fieldset className={styles.fieldset}>
             <legend className={styles.legend}>Cadastre-se sua campanha e ajude a milhares de pessoas!</legend>
 
@@ -31,6 +54,8 @@ export default function Page() {
               pattern="^[a-zA-Z\s]*$"
               type="text"
               placeholder="Informe o nome da sua campanha"
+              onChange={onChange}
+              value={formData.name}
             />
 
             <div>
@@ -42,8 +67,9 @@ export default function Page() {
                 placeholder="Informe uma descrição pequena para sua campanha"
                 required
                 area-required="true"
-              >
-              </textarea>
+                onChange={onChange}
+                value={formData.small_description}
+              />
             </div>
 
             <DynamicInput 
@@ -53,6 +79,8 @@ export default function Page() {
               pattern="^[a-zA-Z0-9]*$"
               type="text"
               placeholder="Informe o link para imagem de sua campanha"
+              onChange={onChange}
+              value={formData.image}
             />
 
             <DynamicInput 
@@ -62,6 +90,8 @@ export default function Page() {
               pattern="^[a-zA-Z\s]*$"
               type="text"
               placeholder="Informe uma tag para aparecer em sua campanha"
+              onChange={onChange}
+              value={formData.tag}
             />
 
             <DynamicInput 
@@ -71,6 +101,8 @@ export default function Page() {
               pattern="^\(\d{2}\) \d{5}-\d{4}$"
               type="tel"
               placeholder="Informe seu telefone: (12) 12345-0234"
+              onChange={onChange}
+              value={formData.contact_phone}
             />
 
             <DynamicInput 
@@ -80,6 +112,8 @@ export default function Page() {
               pattern="^[a-zA-Z0-9\s]*$"
               type="text"
               placeholder="Informe o endereço da sede de sua campanha"
+              onChange={onChange}
+              value={formData.address}
             />
 
             <div>
@@ -91,6 +125,8 @@ export default function Page() {
                 placeholder="Informe a descrição completa da sua campanha"
                 required
                 area-required="true"
+                onChange={onChange}
+                value={formData.complete_description}
               >
               </textarea>
             </div>
@@ -102,6 +138,8 @@ export default function Page() {
               pattern="^[a-zA-Z\s]*$"
               type="text"
               placeholder="Informe o texto de chamado de voluntários"
+              onChange={onChange}
+              value={formData.volunteer_call}
             />
 
             <DynamicInput 
@@ -111,6 +149,8 @@ export default function Page() {
               pattern="^[a-zA-Z\s]*$"
               type="text"
               placeholder="Informe o texto para solicitar doações"
+              onChange={onChange}
+              value={formData.donation_text}
             />
             
             <button 

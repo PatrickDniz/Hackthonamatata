@@ -1,8 +1,26 @@
-import styles from "./page.module.css"
-import DynamicInput from "../../../components/DynamicInput"
-import Image from "next/image"
+'use client'
+
+import styles from './page.module.css'
+import DynamicInput from '../../../components/DynamicInput'
+import Image from 'next/image'
+import { handleSubmit } from '/src/utils/formHandler'
+import { useState } from 'react'
 
 export default function Page() {
+  const [formData, setFormData] = useState({
+    title: '',
+    image: '',
+    address: '',
+    description: ''
+  })
+
+  const onChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
+  
   return (
     <>
       <section className={styles.layout}>
@@ -20,35 +38,41 @@ export default function Page() {
         <p className={styles.text}>
           Ofereça abrigo para pessoas afetadas por desastres naturais. Se você tem um imóvel disponível que não esteja utilizando, sua contribuição pode fazer uma grande diferença. Cadastre seu imóvel e ajude a proporcionar segurança e apoio a quem precisa.
         </p>
-        <form className={styles.form} action="/" method="post">
+        <form className={styles.form} onSubmit={(e) => handleSubmit(e, formData)}>
           <fieldset className={styles.fieldset}>
             <legend className={styles.legend}>Cadastre-se seu imóvel e ajude a milhares de pessoas!</legend>
 
             <DynamicInput 
-              label="Título" 
+              label="Título do Imóvel" 
               name="title" 
               id="title" 
               pattern="^[a-zA-Z0-9\s]*$"
               type="text"
               placeholder="Informe um título para seu imóvel"
+              onChange={onChange}
+              value={formData.title}
             />
 
             <DynamicInput 
-              label="Imagem" 
+              label="Imagem do Imóvel" 
               name="image" 
               id="image" 
               pattern="^[a-zA-Z0-9]*$"
               type="text"
               placeholder="Informe o link para imagem de seu imóvel"
+              onChange={onChange}
+              value={formData.image}
             />
 
             <DynamicInput 
-              label="Seu Endereço" 
+              label="Endereço do Imóvel" 
               name="address" 
               id="address" 
               pattern="^[a-zA-Z0-9\s]*$"
               type="text"
-              placeholder="Informe o seu endereço"
+              placeholder="Informe o endereço de seu imóvel"
+              onChange={onChange}
+              value={formData.address}
             />
 
             <div>
@@ -60,8 +84,9 @@ export default function Page() {
                 placeholder="Informe as específicações do imóvel"
                 required
                 area-required="true"
-              >
-              </textarea>
+                onChange={onChange}
+                value={formData.description}
+              />
             </div>
             
             <button 
