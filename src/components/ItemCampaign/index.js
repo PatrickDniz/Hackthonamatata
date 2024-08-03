@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./style.module.css";
 
-export default function ItemCampaing({ data }) {
+export default function ItemCampaign({ data }) {
   const {
     id,
     name,

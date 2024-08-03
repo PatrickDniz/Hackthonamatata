@@ -1,7 +1,7 @@
 import ItemCampaign from "../ItemCampaign";
 import styles from "./style.module.css";
 
-export default function ListCampaing({ data }) {
+export default function ListCampaign({ data }) {
   return (
     <section className={styles.section}>
       <div className={styles.list}>
