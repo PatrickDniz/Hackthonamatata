@@ -57,7 +57,10 @@ export default function Page() {
                 id="description" 
                 name="description" 
                 rows="4" 
-                placeholder="Informe as específicações do imóvel">
+                placeholder="Informe as específicações do imóvel"
+                required
+                area-required="true"
+              >
               </textarea>
             </div>
             
