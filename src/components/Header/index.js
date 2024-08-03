@@ -11,7 +11,6 @@ import clsx from "clsx";
 
 export default function Header() {
   const path = usePathname(); 
-  console.log(path) 
   
   return ( 
     <header className={styles.header}>

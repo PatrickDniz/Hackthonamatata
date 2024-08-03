@@ -4,7 +4,7 @@ import Title from "@/components/Title";
 
 export default async function Campanhas() {
     const campaigns = await getCampaigns();
-    console.log(`${process.env.APIHACKTHONAMATATA}campaigns`)
+   
     return ( 
         <main>
             <Title data={"Campanhas"} />

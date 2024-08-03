@@ -9,7 +9,7 @@ export default function ItemCampaign({ data }) {
     image,
     tag
   } = data;  
-  console.log(process.env.APIHACKTHONAMATATA)
+  
   return (
     <div className={styles.card}>
       <div className={styles.cardImage}> 
