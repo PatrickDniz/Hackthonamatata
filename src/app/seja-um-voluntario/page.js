@@ -73,7 +73,7 @@ export default function Home() {
               label="Seu Endereço" 
               name="address" 
               id="address" 
-              pattern="^[a-zA-Z\s]*$"
+              pattern="^[a-zA-Z0-9\s]*$"
               type="text"
               placeholder="Informe o seu endereço"
             />
