@@ -6,6 +6,7 @@
 .list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   max-width: calc(100% - 20px);
   margin: 0 auto;
   gap: 20px;
