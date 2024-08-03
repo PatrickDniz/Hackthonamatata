@@ -2,7 +2,7 @@ import styles from "./page.module.css"
 import DynamicInput from "../../../components/DynamicInput"
 import Image from "next/image"
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <section className={styles.layout}>
