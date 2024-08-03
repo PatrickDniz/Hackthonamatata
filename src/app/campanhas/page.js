@@ -1,9 +1,14 @@
+import getCampaigns from "@/api/getCampaigns";
+import ListCampaign from "@/components/ListCampaign";
 import Title from "@/components/Title";
 
-export default function Campanhas() {
-    return (
+export default async function Campanhas() {
+    const campaigns = await getCampaigns();
+    console.log(`${process.env.APIHACKTHONAMATATA}campaigns`)
+    return ( 
         <main>
             <Title data={"Campanhas"} />
+            <ListCampaign data={campaigns} />
         </main>
     );
 }

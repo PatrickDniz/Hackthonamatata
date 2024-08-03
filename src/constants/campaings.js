@@ -1,4 +1,4 @@
-export const campaings = [
+export const campaigns = [
     {
         "nome": "Ajuda Abrigo da salvação",
         "descricao": "Ajuda para construir um abrigo no RS",
