@@ -36,7 +36,7 @@ export default function Navbar() {
         className={clsx(styles.navItem, {
           [styles.selected]: path === "/imoveis/cadastro",
         })}
-        href={"/seja-um-voluntario"}
+        href={"/imoveis/cadastro"}
       >
         <FaHouse fontSize={20} />
         <span>Cadastre um imóvel</span>

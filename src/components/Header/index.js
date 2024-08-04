@@ -21,7 +21,6 @@ export default function Header() {
   }, []);
 
   const isMobile = width <= 991;
-  console.log(isMobile)
 
   return (
     <header className={styles.header}>
