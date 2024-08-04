@@ -1,0 +1,79 @@
+.nav {
+  display: flex;
+  gap: 20px;
+  height: fit-content;
+  position: relative;
+  justify-content: space-between;
+  z-index: 100;
+}
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  gap: 4px;
+  color: var(--sup_6);
+  padding-bottom: 4px;
+  transition: 500ms all ease-in-out;
+}
+.navItem.selected {
+  color: var(--primary);
+}
+.navItem.selected:after { 
+  background-color: var(--primary);
+}
+.navItem > svg {
+  pointer-events: none;
+} 
+
+.navItem > span {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+.navItem:after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: var(--sup_6);
+  transition: 500ms all ease-in-out;
+  opacity: .5;
+}
+.navLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 4px;
+  color: var(--sup_6);
+  padding: 8px 16px;
+  border: 2px solid  var(--sup_6);
+  border-radius: 16px;
+  transition: 500ms all ease-in-out;
+  height: auto;
+  margin-block: auto;
+}
+.navLogin.selected {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.navLogin > span {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+@media (hover: hover) {
+  .navItem:hover:after { 
+    background-color: var(--primary);
+  }
+  .navItem:hover {
+    color: var(--primary);
+  }
+  .navLogin:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+}
