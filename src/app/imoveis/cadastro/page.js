@@ -24,16 +24,6 @@ export default function Page() {
   return (
     <>
       <section className={styles.layout}>
-        <section className={styles.banner_layout}>
-          <Image 
-            className={styles.banner}
-            src="/cadastreseuimovel.png" 
-            alt="Banner cadastre seu imóvel" 
-            title="Banner cadastre seu imóvel"
-            width={1250}
-            height={400}
-          />
-        </section>
         <h1 className={styles.headline}>Cadastre seu Imóvel Disponível</h1>
         <p className={styles.text}>
           Ofereça abrigo para pessoas afetadas por desastres naturais. Se você tem um imóvel disponível que não esteja utilizando, sua contribuição pode fazer uma grande diferença. Cadastre seu imóvel e ajude a proporcionar segurança e apoio a quem precisa.
@@ -75,7 +65,6 @@ export default function Page() {
             />
 
             <div>
-              <label className={styles.label} htmlFor="description">Descrição do Imóvel:</label>
               <textarea className={styles.textarea}
                 id="description" 
                 name="description" 
@@ -92,7 +81,7 @@ export default function Page() {
                 className={styles.button} 
                 type="submit"
             >
-              Enviar
+              Cadastre seu imóvel
             </button>
           </fieldset>
         </form>

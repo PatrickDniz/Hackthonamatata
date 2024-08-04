@@ -30,16 +30,6 @@ export default function Page() {
   return (
     <>
       <section className={styles.layout}>
-        <section className={styles.banner_layout}>
-          <Image 
-            className={styles.banner}
-            src="/crise-climatica.png" 
-            alt="Banner contra crise climatica" 
-            title="Banner contra crise climatica"
-            width={1250}
-            height={400}
-          />
-        </section>
         <h1 className={styles.headline}>Cadastre sua Campanha</h1>
         <p className={styles.text}>
           Cadastre sua campanha para arrecadação, auxílio e contribuição contra crises climáticas! Contribua para um futuro mais sustentável e ajude a enfrentar os desafios das mudanças climáticas. Sua iniciativa pode fazer a diferença!
@@ -60,8 +50,7 @@ export default function Page() {
             />
 
             <div>
-              <label className={styles.label} htmlFor="small_description">Descrição Pequena da Campanha:</label>
-              <textarea className={styles.textarea}
+              <textarea className={styles.textarea_small}
                 id="small_description" 
                 name="small_description" 
                 rows="3" 
@@ -117,7 +106,6 @@ export default function Page() {
             />
 
             <div>
-              <label className={styles.label} htmlFor="complete_description">Descrição Completa da Campanha:</label>
               <textarea className={styles.textarea}
                 id="complete_description" 
                 name="complete_description" 
