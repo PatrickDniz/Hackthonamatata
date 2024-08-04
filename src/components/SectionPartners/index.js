@@ -12,7 +12,7 @@ import Image from "next/image";
 
 export default function SectionPartners({ data }) {
   let infinityLoop = data;
-  infinityLoop.push(data);
+  data.forEach(item => infinityLoop.push(item));
   
   return (
     <section className={styles.section}>
