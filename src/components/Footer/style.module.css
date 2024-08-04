@@ -48,6 +48,9 @@
   align-items: center;
   gap: 12px;
 }
+.socials > a {
+  transition: 333ms all ease-in-out;
+}
 .footerBottom {
   margin-block: 40px;
   display: flex;
@@ -80,5 +83,10 @@
 @media (min-width: 461px) {
   .footerWrapper {
     justify-content: space-between;
+  }
+}
+@media (hover: hover) {
+  .socials > a:hover {
+    color: var(--primary);
   }
 }
