@@ -11,7 +11,9 @@ import "swiper/css/navigation";
 import Image from "next/image";
 
 export default function SectionPartners({ data }) {
-
+  let infinityLoop = data;
+  infinityLoop.push(data);
+  
   return (
     <section className={styles.section}>
       <div className={styles.titleBar}>
@@ -31,7 +33,7 @@ export default function SectionPartners({ data }) {
           spaceBetween={20}
           slidesPerView={"auto"}
         >
-          {data.map((card, index) => (
+          {infinityLoop.map((card, index) => (
             <SwiperSlide className={styles.card} key={index}>
               <Link
                 href={

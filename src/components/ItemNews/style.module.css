@@ -1,9 +1,9 @@
 .card {
-  width: 382px; 
+  width: 396px; 
   max-width: 100%;
-  border: 2px solid var(--quinary);
+  border: 1px solid var(--sup_2);
   border-radius: 40px;
-  background: var(--sup_10);
+  background: var(--tertiary);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -49,7 +49,7 @@
   font-size: 20px;
   font-weight: bold;
   line-height: 120%;
-  color: var(--sup_7);
+  color: var(--sup_10);
 }
 .cardInfo > span{ 
   font-size: 16px;
@@ -73,14 +73,15 @@
   border: none;
   height: 56px;
   border-radius: 48px;
-  background: var(--tertiary);
+  background: var(--primary);
   font-size: 16px;
   line-height: 120%;
-  color: var(--quinary);
+  color: var(--tertiary);
   margin-top: 20px;
   transition: 333ms all ease-in-out;
 }
 
 .cardInfo > a:hover {
+  color: var(--sup_10);
   background: var(--quartenary);
 }
