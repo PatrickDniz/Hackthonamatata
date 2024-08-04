@@ -1,0 +1,17 @@
+.top {
+    margin-bottom: 4rem;
+}
+
+.headline {
+    margin-top: 5rem;
+    font-size: 36px;
+    color: var(--sup_10);
+    text-align: center;
+}
+
+.text {
+    font-size: 16px;
+    color: var(--sup_6);
+    text-align: center;
+    margin-bottom: 2rem;
+}
