@@ -16,7 +16,8 @@ export default function Page() {
     address: '',
     complete_description: '',
     volunteer_call: '',
-    donation_text: ''
+    donation_text: '',
+    'estate': ''
   })
 
   const onChange = (e) => {
@@ -148,6 +149,17 @@ export default function Page() {
               placeholder="Informe o texto para solicitar doações"
               onChange={onChange}
               value={formData.donation_text}
+            />
+
+            <DynamicInput 
+              label="Estado" 
+              name="estate" 
+              id="estate" 
+              pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$"
+              type="text"
+              placeholder="Informe o estado em que será atuado"
+              onChange={onChange}
+              value={formData.estate}
             />
             
             <button 
