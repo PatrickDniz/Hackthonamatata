@@ -5,10 +5,8 @@
 }
 .wrapper {
   padding: 48px;
-  background: var(--sup_1);
-  border: 1px solid var(--sup_4);
+  background: var(--sup_10);
   border-radius: 64px;
-  position: relative;
 }
 .titleBar {
   display: flex;
@@ -23,7 +21,7 @@
   max-width: 100%;
 }
 .titleBar h2 {
-  color: var(--sup_6);
+  color: var(--tertiary);
   font-size: 36px;
   line-height: 120%;
   font-weight: bold;
@@ -39,21 +37,22 @@
   line-height: 120%;
   width: 690px;
   max-width: 100%;
+  max-width: 100%;
 }
 .titleBar > a {
-  color: var(--quinary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--sup_6);
   font-size: 16px;
   line-height: 120%;
   font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 48px;
-  border: 1px solid var(--primary);
+  padding: 8px;
   transition: 333ms all ease-in-out;
-  max-width: 100%;
 }
 .titleBar > a:hover {
   color: var(--primary);
-  filter: grayscale(.2);
+  filter: grayscale(0.2);
 }
 .swiperContainer {
   position: relative;
@@ -65,13 +64,15 @@
   margin-top: 48px;
   gap: 16px;
 }
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
-  color: #97B4AE;
+  color: var(--sup_6);
   transition: 333ms all ease-in-out;
 }
-.prev:hover:not(.swiper-button-disabled), .next:hover:not(.swiper-button-disabled) {
-  color: var(--primary); 
+.prev:hover:not(.swiper-button-disabled),
+.next:hover:not(.swiper-button-disabled) {
+  color: var(--primary);
 }
 .prev {
   left: -20px;
@@ -80,7 +81,7 @@
 .next {
   right: -20px;
 }
-.card { 
+.card {
   width: 396px !important;
   max-width: 100%;
 }

@@ -3,17 +3,17 @@ import styles from "./style.module.css";
 import Image from "next/image";
 
 export default function SectionAboutUs() {
-  const { title, subTitle, cards } = aboutUs;
+  const { title, cards } = aboutUs;
   
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>{title}</h2>
-      <p className={styles.subTitle}>{subTitle}</p>
+      <h2 className={styles.title} dangerouslySetInnerHTML={{__html: title}} />
       <div className={styles.list}>
-        {cards && cards.map(({image, title}) => (
+        {cards && cards.map(({image, title, subTitle}) => (
           <div key={title} className={styles.card}>
             <Image src={image} alt={title} width={240} height={240}/>
             <h3>{title}</h3>
+            <h4 dangerouslySetInnerHTML={{__html: subTitle}} />
           </div>
         ))}
       </div>
