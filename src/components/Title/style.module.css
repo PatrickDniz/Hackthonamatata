@@ -4,7 +4,13 @@
   margin: 20px auto;
 }
 .title {
-  color: var(--primary);
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 36px;
+  color: var(--sup_10);
+  text-align: center;
+}
+.subTitle {
+  font-size: 16px;
+  color: var(--sup_6);
+  text-align: center;
+  margin-bottom: 2rem;
 }

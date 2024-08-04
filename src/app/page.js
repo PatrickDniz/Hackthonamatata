@@ -21,7 +21,7 @@ export default async function Home() {
     type: "campaign"
   }
   const dataNews = {
-    title: "Ultimas notícias",
+    title: "Ultimas <strong>notícias!</strong>",
     subTitle: "Fique informado sobre as crises climáticas mais recentes. Acompanhe nossos alertas e atualizações para entender o impacto global e como você pode ajudar. Esteja sempre atualizado e faça a diferença!",
     link: "/noticias",
     cards: news,
