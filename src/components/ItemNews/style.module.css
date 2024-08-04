@@ -3,7 +3,7 @@
   max-width: 100%;
   border: 2px solid var(--quinary);
   border-radius: 40px;
-  background: transparent;
+  background: var(--sup_10);
   display: flex;
   flex-direction: column;
   overflow: hidden;
