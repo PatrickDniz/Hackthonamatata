@@ -1,0 +1,13 @@
+.section {
+  width: 1250px;
+  max-width: calc(100% - 20px);
+  margin: 20px auto;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: calc(100% - 20px);
+  margin: 0 auto;
+  gap: 20px;
+}

@@ -1,0 +1,91 @@
+.section {
+  width: 1320px;
+  max-width: calc(100% - 20px);
+  margin: 40px auto;
+}
+.wrapper {
+  padding: 48px;
+  background: var(--sup_1);
+  border: 1px solid var(--sup_4);
+  border-radius: 64px;
+  position: relative;
+}
+.titleBar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  max-width: 100%;
+  gap: 20px;
+}
+.titleBar div {
+  max-width: 100%;
+}
+.titleBar h2 {
+  color: var(--sup_6);
+  font-size: 36px;
+  line-height: 120%;
+  font-weight: bold;
+  margin-bottom: 8px;
+  max-width: 100%;
+}
+.titleBar h2 > strong {
+  color: var(--quinary);
+}
+.titleBar h3 {
+  color: var(--sup_6);
+  font-size: 16px;
+  line-height: 120%;
+  width: 690px;
+  max-width: 100%;
+}
+.titleBar > a {
+  color: var(--quinary);
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 48px;
+  border: 1px solid var(--primary);
+  transition: 333ms all ease-in-out;
+  max-width: 100%;
+}
+.titleBar > a:hover {
+  color: var(--primary);
+  filter: grayscale(.2);
+}
+.swiperContainer {
+  position: relative;
+  align-items: center;
+}
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 48px;
+  gap: 16px;
+}
+.prev, .next {
+  cursor: pointer;
+  color: #97B4AE;
+  transition: 333ms all ease-in-out;
+}
+.prev:hover:not(.swiper-button-disabled), .next:hover:not(.swiper-button-disabled) {
+  color: var(--primary); 
+}
+.prev {
+  left: -20px;
+}
+
+.next {
+  right: -20px;
+}
+.card { 
+  width: 396px !important;
+  max-width: 100%;
+}
+@media (max-width: 400px) {
+  .titleBar h2 {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,28 @@
+.label {
+    display: block;
+    font-weight: bold;
+    text-indent: -99999px;
+    height: 10px;
+}
+
+.input{
+    width: 536px;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    height: 36px;
+}
+
+.input:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .input  {
+        width: 100%;
+    }
+}

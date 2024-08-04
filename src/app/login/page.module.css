@@ -1,0 +1,75 @@
+.wrapper {
+  width: 1320px;
+  max-width: calc(100% - 20px);
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.titleBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.titleBar svg {
+  color: var(--primary);
+  animation: rotation 8s linear infinite;
+}
+.title {
+  font-size: 64px;
+  color: var(--sup_10);
+}
+.subTitle {
+  display: inline-flex;
+  gap: 12px;
+  font-size: 24px;
+  color: var(--sup_6);
+}
+.subTitle > strong {
+  color: var(--primary);
+}
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  width: 352px;
+  max-width: calc(100% - 20px);
+  padding: 80px 40px;
+  border-radius: 40px;
+  background: var(--tertiary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  place-self: stretch;
+}
+.card img {
+  margin-bottom: 34px;
+}
+.card strong {
+  text-align: center;
+  font-size: 22px;
+  color: var(--quinary);
+  height: 90px;
+}
+.card span {
+  text-align: center;
+  color: var(--sup_6);
+  font-size: 16px;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

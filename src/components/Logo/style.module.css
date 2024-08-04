@@ -1,0 +1,11 @@
+.logo > img {
+  object-fit: contain;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 42px;
+  font-weight: bold;
+  color: var(--quinary);
+}
