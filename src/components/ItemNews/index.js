@@ -12,9 +12,9 @@ export default function ItemNews({ data }) {
         {tag && <span className={styles.tag}>{tag}</span>}
       </div>
       <div className={styles.cardInfo}>
-        <h3>{title}</h3>
+        <h3>{title}</h3> 
         <span>{small_description}</span>
-        <Link href={`/campanhas/${id}`}>Ajude agora!</Link>
+        <Link href={`/noticias/${id}`}>Ajude agora!</Link>
       </div>
     </div>
   );

@@ -1,0 +1,86 @@
+.wrapper {
+  width: 1320px;
+  max-width: calc(100% - 20px);
+  margin: 40px auto;
+}
+.title {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--sup_10);
+}
+.subTitle {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 24px;
+  color: var(--sup_6);
+}
+.card {
+  margin-top: 26px;
+  width: 100%;
+  background: var(--tertiary);
+  border: 1px solid var(--sup_1);
+  padding: 48px;
+  border-radius: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card img {
+  flex: 1;
+  max-width: 620px;
+  object-fit: contain;
+  height: auto;
+  width: 100%;
+  border-radius: 40px;
+}
+.infos {
+  width: 580px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.tag {
+  font-size: 12px;
+  color: var(--sup_10);
+  background: #0d0d0db5;
+  padding: 4px 8px;
+  border-radius: 40px;
+  width: fit-content;
+}
+.description,
+.volunteer {
+  font-size: 16px;
+  color: var(--sup_10);
+}
+.bar {
+  height: 2px;
+  border: none;
+  background: var(--sup_4);
+}
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.infoItem > div {
+  display: flex;
+  flex-direction: column;
+}
+.infoItem > svg { 
+  width: 39px;
+  height: 39px;
+  color: var(--sup_10);
+}
+.infoItem > div > strong {
+  font-size: 18px;
+  color: var(--sup_10);
+}
+.infoItem > div > p {
+  font-size: 14px;
+  color: var(--sup_6);
+}
